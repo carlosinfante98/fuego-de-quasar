@@ -1,0 +1,23 @@
+{
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "name": "fuego-de-quasar",
+    "description": "",
+    "version": "1.0.0",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/carlosinfante98/fuego-de-quasar.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/carlosinfante98/fuego-de-quasar/issues"
+    },
+    "homepage": "https://github.com/carlosinfante98/fuego-de-quasar#readme"
+}
