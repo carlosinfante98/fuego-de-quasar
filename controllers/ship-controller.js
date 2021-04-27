@@ -1,7 +1,7 @@
 const { getLocation, getMessage, updateSatellites } = require('../services/ship-services');
 
 
-const setSecrets = (req, res, next) => {
+const postSatellitesMessages = (req, res, next) => {
     try {
         let satellites = req.body.satellites;
         updateSatellites(satellites);
@@ -9,12 +9,12 @@ const setSecrets = (req, res, next) => {
         const message = getMessage();
         res.json({ position, message });
     } catch (err) {
-        res.status(404).json('No hay información suficiente para indicar posición y mensaje de auxilio');
+        res.status(404).json('No hay información suficiente para obtener mensaje o posición de la nave');
     }
     next();
 }
 
-const setSecret = (req, res, next) => {
+const postSingleMessage = (req, res, next) => {
     try {
         const name = req.params.satellite_name;
         const distance = req.body.distance;
@@ -29,7 +29,7 @@ const setSecret = (req, res, next) => {
         const msg = getMessage();
         res.json({ position, msg });
     } catch (err) {
-        res.status(404).json('No hay información suficiente para indicar posición y mensaje de auxilio');
+        res.status(404).json('No hay información suficiente para obtener mensaje o posición de la nave');
     }
     next();
 }
@@ -40,13 +40,13 @@ const getFinalSecret = (req, res, next) => {
         const message = getMessage();
         res.json({ position, message });
     } catch (err) {
-        res.status(400).json('No hay información suficiente para indicar posición y mensaje de auxilio');
+        res.status(400).json('No hay información suficiente para obtener mensaje o posición de la nave');
     }
     next();
 }
 
 module.exports = {
-    setSecrets,
-    setSecret,
+    postSatellitesMessages,
+    postSingleMessage,
     getFinalSecret
 }

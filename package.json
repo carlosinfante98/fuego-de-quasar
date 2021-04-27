@@ -1,6 +1,8 @@
 {
     "dependencies": {
-        "express": "^4.17.1"
+        "express": "^4.17.1",
+        "node-trilateration": "^1.0.0",
+        "validator": "^13.6.0"
     },
     "name": "fuego-de-quasar",
     "description": "",
