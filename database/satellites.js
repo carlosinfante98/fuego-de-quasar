@@ -1,3 +1,4 @@
+// Arreglo con los satelites que se tienen disponibles
 let satellites = [{
         name: "kenobi",
         position: {

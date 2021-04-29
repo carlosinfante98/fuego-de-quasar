@@ -6,7 +6,7 @@ class Server {
     constructor() {
         // Configuracion del servidor
         this.app = express();
-        this.port = 3001;
+        this.port = 3000;
 
         // Middlewares
         this.middlewares();

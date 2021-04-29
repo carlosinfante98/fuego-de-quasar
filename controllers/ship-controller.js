@@ -1,6 +1,6 @@
 const { getLocation, getMessage, updateSatellites } = require('../services/ship-services');
 
-
+// Funcion para poder publicar todos los mensajes de los satelites
 const postSatellitesMessages = (req, res) => {
     try {
         let satellites = req.body.satellites;
@@ -14,6 +14,7 @@ const postSatellitesMessages = (req, res) => {
     }
 }
 
+// Publicar el mensaje que recibe un solo satelite
 const postSingleMessage = (req, res) => {
     try {
         const name = req.params.satellite_name;
@@ -34,6 +35,7 @@ const postSingleMessage = (req, res) => {
     }
 }
 
+// Unificacion de la posicion encontrada de la nave con su mensaje respectivo
 const getFinalSecret = (req, res) => {
     try {
         const position = getLocation();
