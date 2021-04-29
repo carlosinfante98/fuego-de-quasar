@@ -91,7 +91,7 @@ La idea es que este servicio responda:
 ```
 
 #### GET /topsecret_split
-  - https://52.1.216.149:3000/topsecret_split
+  - http://52.1.216.149:3000/topsecret_split
 
 La idea es que este servicio responda:
 -   HTTP Status 200 con la posición de la nave y mensaje de auxilio
